@@ -21,7 +21,7 @@ This template will help you to create Virtual Machine in Azure Cloud with proper
 
 4. Now, We need to login into the Virtual Machine (linuxvm). So, we need to create private key to ssh in our machine.
 5. Using the `terraform output -raw tls_private_key > key-store` we can store the private key.
-6. Then , In last we need to ssh in our vm using `ssh -i id_rsa azureuser@<public_ip_address>` :
+6. Then , In last we need to ssh in our vm using `ssh -i key-store azureuser@<public_ip_address>` :
 ![vm-login.png](assets%2Fvm-login.png)
 7. Now , You can use the VM and play around with it. 
 
